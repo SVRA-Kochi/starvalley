@@ -46,12 +46,6 @@
 
                 <div class="rust-divider"></div>
 
-                <h3>Our Core Values</h3>
-                <ul class="values-list" id="core-values">
-                    <!-- Injected from JSON -->
-                </ul>
-
-                <div class="rust-divider"></div>
 
                 <section class="officials-section">
                     <h3>Key Officials</h3>
@@ -113,13 +107,6 @@
                 document.getElementById('hero-tagline').textContent = home.hero.tagline;
                 document.getElementById('hero-banner').src = home.hero.bannerImage;
 
-                // Core Values
-                const valuesList = document.getElementById('core-values');
-                home.coreValues.forEach(val => {
-                    const li = document.createElement('li');
-                    li.innerHTML = `<strong>${val.label}:</strong> ${val.value}`;
-                    valuesList.appendChild(li);
-                });
 
                 // Key Officials
                 const officialsGrid = document.getElementById('key-officials');

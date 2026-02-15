@@ -4,20 +4,6 @@
             "tagline": "Building a vibrant, harmonious, and supportive community in the heart of Kakkanad.",
             "bannerImage": "images/Banner.jpg"
         },
-        "coreValues": [
-            {
-                "label": "Safety",
-                "value": "24/7 security and a watchful neighborhood."
-            },
-            {
-                "label": "Harmony",
-                "value": "Respectful living and shared community values."
-            },
-            {
-                "label": "Support",
-                "value": "Being there for each other in times of need."
-            }
-        ],
         "keyOfficials": [
             {
                 "position": "President",
