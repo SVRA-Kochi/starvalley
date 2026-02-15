@@ -1,0 +1,80 @@
+[
+    {
+        "No": 1,
+        "Position": "PRESIDENT",
+        "Name": "WILSON THOMAS",
+        "Contact": "9444779933"
+    },
+    {
+        "No": 2,
+        "Position": "SECRETARY",
+        "Name": "Dr. K SHIBU",
+        "Contact": "8111900064"
+    },
+    {
+        "No": 3,
+        "Position": "TREASURER",
+        "Name": "ABOOBAKER M M",
+        "Contact": "7907997453"
+    },
+    {
+        "No": 4,
+        "Position": "VICE PRESIDENT",
+        "Name": "MUHAMMED NOUFAL",
+        "Contact": "9037687377"
+    },
+    {
+        "No": 5,
+        "Position": "JOINT SECRETARY",
+        "Name": "MOHAMMED K P",
+        "Contact": "9446608114"
+    },
+    {
+        "No": 6,
+        "Position": "JOINT SECRETARY",
+        "Name": "PAREETH M I",
+        "Contact": "9946353643"
+    },
+    {
+        "No": 7,
+        "Position": "COMMITTEE MEMBER",
+        "Name": "JOSEKUTTY V E",
+        "Contact": "9446065786"
+    },
+    {
+        "No": 8,
+        "Position": "COMMITTEE MEMBER",
+        "Name": "JOSEPH H OLIVERO",
+        "Contact": "8547109465"
+    },
+    {
+        "No": 9,
+        "Position": "COMMITTEE MEMBER",
+        "Name": "MANMADHAN NAIR K M",
+        "Contact": "9846037955"
+    },
+    {
+        "No": 10,
+        "Position": "COMMITTEE MEMBER",
+        "Name": "VEERANKUTTY K A",
+        "Contact": "7510826915"
+    },
+    {
+        "No": 11,
+        "Position": "COMMITTEE MEMBER",
+        "Name": "SASIDHARAN NAIR C K",
+        "Contact": "9400108571"
+    },
+    {
+        "No": 12,
+        "Position": "COMMITTEE MEMBER",
+        "Name": "SAJI P PUSHKARAN",
+        "Contact": "9995079091"
+    },
+    {
+        "No": 13,
+        "Position": "COMMITTEE MEMBER",
+        "Name": "SHAMEER N K",
+        "Contact": "9947044345"
+    }
+]

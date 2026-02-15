@@ -1,0 +1,191 @@
+{
+    "home": {
+        "hero": {
+            "tagline": "Building a vibrant, harmonious, and supportive community in the heart of Kakkanad.",
+            "bannerImage": "images/Banner.jpg"
+        },
+        "coreValues": [
+            {
+                "label": "Safety",
+                "value": "24/7 security and a watchful neighborhood."
+            },
+            {
+                "label": "Harmony",
+                "value": "Respectful living and shared community values."
+            },
+            {
+                "label": "Support",
+                "value": "Being there for each other in times of need."
+            }
+        ],
+        "keyOfficials": [
+            {
+                "position": "President",
+                "name": "Wilson Thomas",
+                "photo": "images/wilson.jpg",
+                "address": "SVRA 26, Punnakottil House\nElavakkattu Lane",
+                "mobile": "9444779933",
+                "email": "president@svra.in"
+            },
+            {
+                "position": "Secretary",
+                "name": "Dr. K Shibu",
+                "photo": "images/shibu.jpg",
+                "address": "SVRA 10A, Manjummekkudiyil House\nPazhapura 2nd Cross Road",
+                "mobile": "9400594000",
+                "email": "secretary@svra.in"
+            },
+            {
+                "position": "Treasurer",
+                "name": "Aboobaker M M",
+                "photo": "images/bakker.jpg",
+                "address": "SVRA 4, Manath Kizhakke Puthan Purayil\nPazhapura 1st Cross Road",
+                "mobile": "7907997453",
+                "email": "treasurer@svra.in"
+            }
+        ],
+        "executiveCommittee": [
+            {
+                "id": 1,
+                "position": "PRESIDENT",
+                "name": "WILSON THOMAS",
+                "contact": "9444779933"
+            },
+            {
+                "id": 2,
+                "position": "SECRETARY",
+                "name": "Dr. K SHIBU",
+                "contact": "8111900064"
+            },
+            {
+                "id": 3,
+                "position": "TREASURER",
+                "name": "ABOOBAKER M M",
+                "contact": "7907997453"
+            },
+            {
+                "id": 4,
+                "position": "VICE PRESIDENT",
+                "name": "MUHAMMED NOUFAL",
+                "contact": "9037687377"
+            },
+            {
+                "id": 5,
+                "position": "JOINT SECRETARY",
+                "name": "MOHAMMED K P",
+                "contact": "9446608114"
+            },
+            {
+                "id": 6,
+                "position": "JOINT SECRETARY",
+                "name": "PAREETH M I",
+                "contact": "9946353643"
+            },
+            {
+                "id": 7,
+                "position": "COMMITTEE MEMBER",
+                "name": "JOSEKUTTY V E",
+                "contact": "9446065786"
+            },
+            {
+                "id": 8,
+                "position": "COMMITTEE MEMBER",
+                "name": "JOSEPH H OLIVERO",
+                "contact": "8547109465"
+            },
+            {
+                "id": 9,
+                "position": "COMMITTEE MEMBER",
+                "name": "MANMADHAN NAIR K M",
+                "contact": "9846037955"
+            },
+            {
+                "id": 10,
+                "position": "COMMITTEE MEMBER",
+                "name": "VEERANKUTTY K A",
+                "contact": "7510826915"
+            },
+            {
+                "id": 11,
+                "position": "COMMITTEE MEMBER",
+                "name": "SASIDHARAN NAIR C K",
+                "contact": "9400108571"
+            },
+            {
+                "id": 12,
+                "position": "COMMITTEE MEMBER",
+                "name": "SAJI P PUSHKARAN",
+                "contact": "9995079091"
+            },
+            {
+                "id": 13,
+                "position": "COMMITTEE MEMBER",
+                "name": "SHAMEER N K",
+                "contact": "9947044345"
+            }
+        ]
+    },
+    "about": {
+        "title": "About Star Valley Residents Association",
+        "subtitle": "Kakkanad, Kochi",
+        "lead": "A unified voice for a better community life, fostering harmony and progress together.",
+        "content": [
+            "The Star Valley Residents Association (SVRA), Kakkanad, is a vibrant and proactive community organization dedicated to the well-being and development of the residents in the Star Valley neighborhood. Our association serves as a platform for residents to come together, address common concerns, and work towards enhancing the quality of life for everyone.",
+            "Since its inception, SVRA has been actively involved in several initiatives, ranging from maintaining the cleanliness and security of the area to organizing cultural events and social gatherings. Our goal is to create a safe, sustainable, and inclusive environment where every resident feels valued and connected.",
+            "With a strong focus on community spirit, SVRA encourages active participation from all residents in its various projects. Whether it's environmental conservation, infrastructure improvements, or social welfare programs, we believe that together we can make a significant impact.",
+            "Join us in our mission to build a stronger and more vibrant Star Valley. Together, we can create a neighborhood that we are all proud to call home."
+        ],
+        "gallery": [
+            {
+                "src": "images/GGGGG-2048x1152.jpeg",
+                "alt": "Community Gathering"
+            },
+            {
+                "src": "images/VVVVVVVV.jpeg",
+                "alt": "Star Valley View"
+            },
+            {
+                "src": "images/XXXXX.jpeg",
+                "alt": "Neighborhood Event"
+            }
+        ]
+    },
+    "services": {
+        "title": "Our Services & Initiatives",
+        "lead": "Dedicated to enhancing the living experience for every resident through targeted community services.",
+        "items": [
+            {
+                "title": "Support",
+                "description": "We support the members of the association in all issues related to their living at Star Valley. Anyone can Contact us by calling or emailing. You will receive a reply by email within 24 hours."
+            },
+            {
+                "title": "Community Living",
+                "description": "We look for harmonious co existence of all live here. we emphasize mutual understanding, unity, and community, promoting a sense of collective well-being"
+            },
+            {
+                "title": "Social Life",
+                "description": "We intend to provide good quality life all reside in Star Valley. Social gatherings and meetings on occasions keep the connection live between the members."
+            }
+        ]
+    },
+    "contact": {
+        "title": "Get in Touch",
+        "lead": "Have a question or want to get involved? We are here to listen.",
+        "address": "Star Valley Residents Association, Kakkanad, Kochi, Kerala.",
+        "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15716.488056254425!2d76.3353526!3d10.0063231!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080c900e5e0c5f%3A0x6e2b3e4ca1b59623!2sKakkanad%2C%20Kochi%2C%20Kerala!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin",
+        "emails": [
+            {
+                "label": "President",
+                "value": "president@svra.in"
+            },
+            {
+                "label": "Secretary",
+                "value": "secretary@svra.in"
+            },
+            {
+                "label": "General Inquiry",
+                "value": "info@svra.in"
+            }
+        ]
+    }
+}

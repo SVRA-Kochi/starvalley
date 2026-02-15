@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | SVRA</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;700&family=Inter:wght@400;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="container nav-bar">
+            <div class="logo">
+                <img src="images/logo.jpg" alt="SVRA Logo">
+                <span>SVRA</span>
+            </div>
+            <nav>
+                <a href="index.html">Welcome</a>
+                <a href="index.html#committee">Committee</a>
+                <a href="about.html">About</a>
+                <a href="services.html" class="active">Services</a>
+                <a href="contact.html">Contact</a>
+                <a id="auth-link" href="login.html"
+                    style="border: 1px solid var(--primary); padding: 5px 15px; border-radius: 20px; font-size: 0.85rem;">Login</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <article class="welcome-section">
+            <h1 id="services-title">Our Services</h1>
+            <p class="lead" id="services-lead"></p>
+
+            <div class="services-grid" id="services-list"
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px;">
+                <!-- Items injected from JSON -->
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="current-year"></span> Star Valley Residents Association. <br> <span>Harmony in
+                    community.</span></p>
+        </div>
+    </footer>
+
+    <script>
+        fetch('content.json')
+            .then(res => res.json())
+            .then(data => {
+                const services = data.services;
+                document.getElementById('services-title').textContent = services.title;
+                document.getElementById('services-lead').textContent = services.lead;
+
+                const listDiv = document.getElementById('services-list');
+                services.items.forEach(item => {
+                    const card = document.createElement('div');
+                    card.className = 'official-card'; // Reuse styled card
+                    card.style.textAlign = 'left';
+                    card.innerHTML = `
+                        <h4 style="color: var(--primary); margin-bottom: 15px;">${item.title}</h4>
+                        <p style="font-size: 0.95rem; line-height: 1.6;">${item.description}</p>
+                    `;
+                    listDiv.appendChild(card);
+                });
+            });
+
+        const isLoggedIn = localStorage.getItem('svra_auth') === 'true';
+        if (isLoggedIn) {
+            const authLink = document.getElementById('auth-link');
+            authLink.textContent = 'Logout';
+            authLink.href = '#';
+            authLink.addEventListener('click', (e) => {
+                e.preventDefault();
+                localStorage.removeItem('svra_auth');
+                window.location.reload();
+            });
+        }
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>

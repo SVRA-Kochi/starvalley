@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVRA | Star Valley Residents Association</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;700&family=Inter:wght@400;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="container nav-bar">
+            <div class="logo">
+                <img src="images/logo.jpg" alt="SVRA Logo">
+                <span>SVRA</span>
+            </div>
+            <nav id="main-nav">
+                <a href="index.html" class="active">Welcome</a>
+                <a href="index.html#committee">Committee</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="contact.html">Contact</a>
+                <a href="login.html" id="auth-link"
+                    style="border: 1px solid var(--primary); padding: 5px 15px; border-radius: 20px; font-size: 0.85rem;">Login</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <article class="welcome-section">
+            <div class="post-meta"><span id="current-date"></span> • Kakkanad, Kochi</div>
+            <h1>Welcome to Star Valley</h1>
+
+            <div class="hero-image">
+                <img id="hero-banner" src="images/Banner.jpg" alt="Star Valley Neighborhood">
+            </div>
+
+            <div class="content">
+                <p class="lead" id="hero-tagline"></p>
+
+                <div class="rust-divider"></div>
+
+                <h3>Our Core Values</h3>
+                <ul class="values-list" id="core-values">
+                    <!-- Injected from JSON -->
+                </ul>
+
+                <div class="rust-divider"></div>
+
+                <section class="officials-section">
+                    <h3>Key Officials</h3>
+                    <div class="officials-grid" id="key-officials">
+                        <!-- Injected from JSON -->
+                    </div>
+                </section>
+
+                <div class="rust-divider"></div>
+
+                <section id="committee" class="committee-section" style="display: none;">
+                    <h3>Executive Committee</h3>
+                    <p>Meet the dedicated members of our Executive Committee for 2026.</p>
+                    <div class="table-container">
+                        <table class="stylish-table">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Position</th>
+                                    <th>Name</th>
+                                    <th>Contact</th>
+                                </tr>
+                            </thead>
+                            <tbody id="committee-table-body">
+                                <!-- Injected from JSON -->
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <div id="login-prompt" class="cta-block"
+                    style="background: var(--bg-alt); padding: 40px; border-radius: var(--radius-md); text-align: center; margin: 40px 0;">
+                    <p style="margin-bottom: 20px;">The Executive Committee list is private to members.</p>
+                    <a href="login.html" class="cta-button" style="display: inline-block;">Member Login to View</a>
+                </div>
+
+                <div class="cta-block">
+                    <p>Join our thriving community today.</p>
+                    <a href="contact.html" class="cta-button">Join Association</a>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="current-year"></span> Star Valley Residents Association. <br> <span>Harmony in
+                    community.</span></p>
+        </div>
+    </footer>
+
+    <script>
+        fetch('content.json')
+            .then(res => res.json())
+            .then(data => {
+                const home = data.home;
+
+                // Hero Section
+                document.getElementById('hero-tagline').textContent = home.hero.tagline;
+                document.getElementById('hero-banner').src = home.hero.bannerImage;
+
+                // Core Values
+                const valuesList = document.getElementById('core-values');
+                home.coreValues.forEach(val => {
+                    const li = document.createElement('li');
+                    li.innerHTML = `<strong>${val.label}:</strong> ${val.value}`;
+                    valuesList.appendChild(li);
+                });
+
+                // Key Officials
+                const officialsGrid = document.getElementById('key-officials');
+                home.keyOfficials.forEach(off => {
+                    const card = document.createElement('div');
+                    card.className = 'official-card';
+                    card.innerHTML = `
+                        <div class="official-photo">
+                            <img src="${off.photo}" alt="${off.name}">
+                        </div>
+                        <div class="official-info">
+                            <span class="official-position">${off.position}</span>
+                            <h4 class="official-name">${off.name}</h4>
+                            <p class="official-detail">${off.address.replace('\n', '<br>')}</p>
+                            <p class="official-contact">Mob: <strong>${off.mobile}</strong><br>Email: <a href="mailto:${off.email}">${off.email}</a></p>
+                        </div>
+                    `;
+                    officialsGrid.appendChild(card);
+                });
+
+                // Executive Committee Table
+                const isLoggedIn = localStorage.getItem('svra_auth') === 'true';
+                if (isLoggedIn) {
+                    document.getElementById('committee').style.display = 'block';
+                    document.getElementById('login-prompt').style.display = 'none';
+                    const authLink = document.getElementById('auth-link');
+                    authLink.textContent = 'Logout';
+                    authLink.href = '#';
+                    authLink.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        localStorage.removeItem('svra_auth');
+                        window.location.reload();
+                    });
+
+                    const tableBody = document.getElementById('committee-table-body');
+                    home.executiveCommittee.forEach(member => {
+                        const row = document.createElement('tr');
+                        row.innerHTML = `
+                            <td>${member.id}</td>
+                            <td><strong>${member.position}</strong></td>
+                            <td>${member.name}</td>
+                            <td>${member.contact}</td>
+                        `;
+                        tableBody.appendChild(row);
+                    });
+                }
+            });
+
+        const now = new Date();
+        document.getElementById('current-year').textContent = now.getFullYear();
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        document.getElementById('current-date').textContent = now.toLocaleDateString('en-US', options);
+    </script>
+</body>
+
+</html>
